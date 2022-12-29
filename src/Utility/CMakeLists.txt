@@ -13,6 +13,8 @@ install(TARGETS Utility
         EXPORT Utility.package
         DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
 
+export(TARGETS Utility NAMESPACE tg:: FILE ${PROJECT_BINARY_DIR}/Utility.package.cmake)
+
 set(SRC_FILES
     Scope.hpp
     Global.hpp)
