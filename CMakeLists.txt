@@ -36,7 +36,7 @@ else (WIN32)
     #set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*clang-analyzer*")
 endif (WIN32)
 
-# LTO requires cmake min version 3.9
+# LTO requires at least cmake 3.9
 if(POLICY CMP0069)
     cmake_policy(SET CMP0069 NEW)
     set(CMAKE_POLICY_DEFAULT_CMP0069 NEW)
