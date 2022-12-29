@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Global.hpp"
 #include <functional>
 
 namespace TG
