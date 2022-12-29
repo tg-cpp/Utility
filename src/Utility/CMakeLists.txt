@@ -14,7 +14,7 @@ install(TARGETS Utility
         DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
 
 set(SRC_FILES
-    StackHelper.hpp
+    Scope.hpp
     Global.hpp)
 
 install(FILES

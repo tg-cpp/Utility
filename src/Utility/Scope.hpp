@@ -4,7 +4,7 @@
 
 namespace TG
 {
-    namespace StackHelper
+    namespace Scope
     {
         class OnFailure final
         {
@@ -90,5 +90,5 @@ namespace TG
                 other.cleanup = function<void()>();
             }
         };
-    } // namespace StackHelper
+    } // namespace Scope
 } // namespace TG
