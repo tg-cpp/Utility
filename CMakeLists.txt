@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.14)
 
 option(BUILD_SHARED_LIBS "dynamic link build" ON)
 if (BUILD_SHARED_LIBS)
@@ -36,7 +36,7 @@ else (WIN32)
     #set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*clang-analyzer*")
 endif (WIN32)
 
-# LTO requires cmake min version 3.9. otherwise, it was set to 3.2
+# LTO requires cmake min version 3.9
 if(POLICY CMP0069)
     cmake_policy(SET CMP0069 NEW)
     set(CMAKE_POLICY_DEFAULT_CMP0069 NEW)

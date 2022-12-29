@@ -6,9 +6,10 @@ namespace TG
 {
     namespace Scope
     {
+        using std::function;
+
         class OnFailure final
         {
-            using function = std::function;
         private:
             function<void()> cleanup{};
 
@@ -18,8 +19,8 @@ namespace TG
             OnFailure(function<void()> const& cleanup_)
                 : cleanup(cleanup_)
             {}
-            OnFailure(function<void()>&& cleanup_)
-                : cleanup(move(cleanup_)) noexcept
+            OnFailure(function<void()>&& cleanup_) noexcept
+                : cleanup(move(cleanup_))
             {}
 
             OnFailure(OnFailure const&) = delete;
@@ -53,7 +54,6 @@ namespace TG
 
         class Finally final
         {
-            using function = std::function;
         private:
             function<void()> cleanup{};
 
@@ -63,8 +63,8 @@ namespace TG
             Finally(function<void()> const& cleanup_)
                 : cleanup(cleanup_)
             {}
-            Finally(function<void()>&& cleanup_)
-                : cleanup(move(cleanup_)) noexcept
+            Finally(function<void()>&& cleanup_) noexcept
+                : cleanup(move(cleanup_))
             {}
 
             Finally(Finally const&) = delete;

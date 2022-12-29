@@ -29,7 +29,7 @@ endif()
 add_subdirectory(Utility)
 
 # following is used for find_package functionality
-install(FILES Utility-config.cmake DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
+install(FILES utility-config.cmake DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
 install(EXPORT Utility.package NAMESPACE tg:: DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
 
 
