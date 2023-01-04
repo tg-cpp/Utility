@@ -14,8 +14,9 @@ install(TARGETS Utility
         DESTINATION ${UTILITY_INSTALL_DESTINATION_LIBRARY})
 
 set(SRC_FILES
-    Scope.hpp
-    Global.hpp)
+    Global.hpp
+    Meta.hpp
+    Scope.hpp)
 
 install(FILES
     ${SRC_FILES}
